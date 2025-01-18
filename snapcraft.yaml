@@ -5,21 +5,18 @@ grade: stable
 confinement: strict
 compression: lzo
 license: GPL-3.0-or-later
-version: '0.21'
+source-code: https://github.com/Kyuyrii/celluloid-twin-snap/blob/main/snapcraft.yaml
 assumes:
-  - snapd2.67
+  - snapd2.67 #shmem plug needs snapd 2.54+, taking 2.67 for convenience.
 platforms:
   amd64:
-    build-on: [amd64]
-    build-for: [amd64]
-summary: GTK frontend for mpv
-description: |
-  Celluloid Twin is a GTK frontend for the MPV, without libadwaita.
+  arm64:
+
 environment:
   PYTHONPATH: ${SNAP}/lib/python3.12/site-packages
 
 slots:
-  celluloid:
+  celluloid-twin:
     interface: dbus
     bus: session
     name: io.github.celluloid_player.Celluloid
