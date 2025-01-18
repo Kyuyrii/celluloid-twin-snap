@@ -43,6 +43,8 @@ apps:
       - unity7
       - screen-inhibit-control
       - shmem
+      - gtk-3-themes
+      - icon-themes
     slots:
       - mpris
 
