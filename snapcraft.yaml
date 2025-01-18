@@ -6,6 +6,8 @@ confinement: strict
 compression: lzo
 license: GPL-3.0-or-later
 version: '0.21'
+assumes:
+  - snapd2.67
 platforms:
   amd64:
     build-on: [amd64]
