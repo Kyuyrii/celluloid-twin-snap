@@ -5,9 +5,8 @@ grade: stable
 confinement: strict
 compression: lzo
 license: GPL-3.0-or-later
-source-code: https://github.com/Kyuyrii/celluloid-twin-snap/blob/main/snapcraft.yaml
 assumes:
-  - snapd2.67 #shmem plug needs snapd 2.54+, taking 2.67 for convenience.
+  - snapd2.62 #shmem plug needs snapd 2.54+, taking 2.62 for convenience.
 platforms:
   amd64:
   arm64:
@@ -16,7 +15,7 @@ environment:
   PYTHONPATH: ${SNAP}/lib/python3.12/site-packages
 
 slots:
-  celluloid-twin:
+  celluloid:
     interface: dbus
     bus: session
     name: io.github.celluloid_player.Celluloid
@@ -138,7 +137,7 @@ parts:
       - -usr/lib/*/pkgconfig
 
   celluloid:
-    source: https://github.com/Kyuyrii/celluloid-twin-snap/releases/download/celluloid-twin-snap-0.21/celluloid-twin-0.21-originalcode.tar.gz
+    source: https://github.com/Kyuyrii/celluloid-twin-snap/releases/download/celluloid-twin-snap-0.23/celluloid-twin-0.23.tar.gz
     after: [mpv]
     plugin: meson
     parse-info: [usr/share/metainfo/io.github.celluloid_player.Celluloid.appdata.xml]
