@@ -5,11 +5,10 @@ grade: stable
 confinement: strict
 compression: lzo
 license: GPL-3.0-or-later
-assumes:
-  - snapd2.62 #shmem plug needs snapd 2.54+, taking 2.62 for convenience.
 platforms:
   amd64:
-  arm64:
+    build-on: [amd64]
+    build-for: [amd64]
 
 environment:
   PYTHONPATH: ${SNAP}/lib/python3.12/site-packages
@@ -43,8 +42,6 @@ apps:
       - unity7
       - screen-inhibit-control
       - shmem
-      - gtk-3-themes
-      - icon-themes
     slots:
       - mpris
 
