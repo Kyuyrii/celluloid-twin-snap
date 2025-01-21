@@ -42,6 +42,8 @@ apps:
       - unity7
       - screen-inhibit-control
       - shmem
+      - gtk-3-themes
+      - icon-themes
     slots:
       - mpris
 
@@ -136,7 +138,7 @@ parts:
       - -usr/lib/*/pkgconfig
 
   celluloid:
-    source: https://github.com/Kyuyrii/celluloid-twin-snap/releases/download/celluloid-twin-snap-0.21/celluloid-twin-0.21-originalcode.tar.gz
+    source: https://github.com/Kyuyrii/celluloid-twin-snap/releases/download/celluloid-twin-snap-0.23/celluloid-twin-0.23.tar.gz
     after: [mpv]
     plugin: meson
     parse-info: [usr/share/metainfo/io.github.celluloid_player.Celluloid.appdata.xml]
