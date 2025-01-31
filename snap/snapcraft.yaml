@@ -138,7 +138,7 @@ parts:
       - -usr/lib/*/pkgconfig
 
   celluloid:
-    source: https://github.com/Kyuyrii/celluloid-twin-snap/releases/download/celluloid-twin-snap-0.21/celluloid-twin-0.21.tar.xz
+    source: https://github.com/Kyuyrii/celluloid-twin-snap/releases/download/celluloid-twin-snap-0.21/celluloid-twin-0.21-sourcecode.tar.xz
     after: [mpv]
     plugin: meson
     parse-info: [usr/share/metainfo/io.github.celluloid_player.Celluloid.appdata.xml]
