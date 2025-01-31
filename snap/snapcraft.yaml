@@ -5,6 +5,7 @@ grade: stable
 confinement: strict
 compression: lzo
 license: GPL-3.0-or-later
+version: '0.21'
 platforms:
   amd64:
     build-on: [amd64]
